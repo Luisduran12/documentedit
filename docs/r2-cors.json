@@ -1,0 +1,9 @@
+[
+  {
+    "AllowedOrigins": ["https://TU-APP.vercel.app", "http://localhost:3000"],
+    "AllowedMethods": ["GET", "PUT", "HEAD"],
+    "AllowedHeaders": ["Content-Type"],
+    "ExposeHeaders": ["ETag", "Content-Type", "Content-Length"],
+    "MaxAgeSeconds": 3600
+  }
+]

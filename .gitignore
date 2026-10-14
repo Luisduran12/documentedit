@@ -1,0 +1,67 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+!.env.example
+
+# generado por scripts/copy-pdfjs.mjs
+/public/pdfjs
+
+/.tmp
+
+# PDFs reales de clientes: NUNCA al repositorio (solo pruebas manuales locales)
+*FURA*.pdf
+*Extracto Contrato*.pdf
+tests/fixtures/private/
+
+# Cualquier PDF fuera de los fixtures sintéticos (protección extra contra subir documentos de clientes)
+*.pdf
+!tests/fixtures/*.pdf
+
+# Volcados y datos locales
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+dev/data/
+*.log
+.local_data/
+*.zip

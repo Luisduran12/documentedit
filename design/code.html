@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#93000a","surface-container":"#1c1f2a","on-primary-fixed-variant":"#5a00c6","secondary":"#b4c5ff","on-secondary-container":"#cdd7ff","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","tertiary":"#4edea3","secondary-fixed":"#dbe1ff","on-secondary-fixed-variant":"#003ea8","primary":"#d2bbff","on-secondary":"#002a78","inverse-on-surface":"#2c303b","surface-variant":"#313540","on-tertiary-fixed-variant":"#005236","on-secondary-fixed":"#00174b","background":"#0f131d","on-tertiary":"#003824","on-tertiary-container":"#76ffc2","outline":"#958da1","on-tertiary-fixed":"#002113","error":"#ffb4ab","primary-fixed-dim":"#d2bbff","surface-tint":"#d2bbff","tertiary-fixed":"#6ffbbe","surface-dim":"#0f131d","on-error-container":"#ffdad6","on-error":"#690005","secondary-container":"#0053db","surface-bright":"#353944","on-surface-variant":"#ccc3d8","secondary-fixed-dim":"#b4c5ff","surface-container-lowest":"#0a0e18","on-primary-container":"#ede0ff","inverse-surface":"#dfe2f1","tertiary-container":"#007650","surface-container-highest":"#313540","primary-container":"#7c3aed","on-primary-fixed":"#25005a","on-background":"#dfe2f1","primary-fixed":"#eaddff","outline-variant":"#4a4455","inverse-primary":"#732ee4","surface-container-high":"#262a35","surface-container-low":"#171b26","surface":"#0f131d","on-primary":"#3f008e"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-md":"0.75rem","space-xl":"2rem","gutter":"1rem","margin":"1rem","space-lg":"1.25rem","margin-desktop":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-sm":["Geist"],"body-md":["Geist"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Geist"],"body-lg":["Geist"],"label-md":["Geist"],"mono-timer":["JetBrains Mono"],"mono-data":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","letterSpacing":"0","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"-0.01em","fontWeight":"500"}],"mono-timer":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"mono-data":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-gutter flex items-center justify-between bg-surface-container-lowest/50"><div class="flex items-center gap-space-sm"><img alt="DocuPilot Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADDZyGmV1UsvoB5fDHlqGWk5J3R-zMrgVCq3ncJMQaad6gMgueSNwr_MLRU8AhpWHI-Lm5_z6U_9IlAZFmOVygCbaNS3sQ39iUD2Nje8Ugv4-cnLTtNvmM8vBFVRfB3cDirmDZAd-Q36QbRtRGJ1imdJSxOCMRERI_R2O0QT-ASXT9DOVo4aK3LunkOjYlj7yo6HrkYQKQzCfajBayMup_g6OiLkoDgq5lxFM0-JtPwFrFcqeq394"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">DocuPilot</span><span class="font-mono-timer text-mono-timer text-primary">STUDIO v2.4</span></div></div><span class="px-space-xs py-0.5 rounded bg-primary-container/30 text-primary font-mono-timer text-mono-timer uppercase tracking-wide">ENTERPRISE</span></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md"><div class="px-space-sm mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Espacio de Trabajo</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="inicio" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Inicio</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="editor-pdf" href="#"><span class="material-symbols-outlined text-[20px]">edit_document</span>Editor PDF</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="ocr-y-escaneados" href="#"><span class="material-symbols-outlined text-[20px]">document_scanner</span>OCR y Escaneados</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="conversor-a-imagenes" href="#"><span class="material-symbols-outlined text-[20px]">burst_mode</span>Conversor a Imágenes</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="generador-de-enlaces-y-qr" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_2</span>Generador de Enlaces y QR</a></nav><div class="px-space-sm mt-space-md mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Almacenamiento Seguro</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_supervised</span>Mis Documentos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="archivos-compartidos" href="#"><span class="material-symbols-outlined text-[20px]">share</span>Archivos Compartidos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="historial-de-operaciones" href="#"><span class="material-symbols-outlined text-[20px]">history</span>Historial de Operaciones</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="papelera-y-eliminados" href="#"><span class="material-symbols-outlined text-[20px]">delete</span>Papelera y Eliminados</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="configuracion-y-seguridad" href="#"><span class="material-symbols-outlined text-[20px]">shield</span>Configuración y Seguridad</a></nav></div></div><div class="p-space-sm bg-surface-container-lowest/80"><div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>Bóveda Privada</span><span class="font-mono-timer text-mono-timer text-tertiary">14%</span></div><div class="w-full bg-surface-variant rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 14%"></div></div><div class="flex items-center justify-between text-on-surface-variant font-mono-data text-mono-data"><span>1.42 GB / 10 GB</span><span class="text-outline">AES-GCM</span></div><div class="pt-space-xs flex flex-col gap-0.5 text-on-surface-variant"><div class="flex items-center justify-between font-mono-timer text-mono-timer"><span>Archivos Temporales:</span><span class="text-on-surface font-semibold">18 activos</span></div><div class="flex items-center justify-between font-mono-timer text-mono-timer text-tertiary"><span>Daemon TTL:</span><span>Activo (60s)</span></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center w-full px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant gap-space-sm"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent w-full text-on-surface placeholder:text-outline focus:outline-none font-body-sm text-body-sm" placeholder="Buscar documentos, hashes SHA-256 o enlaces..." type="text"/><kbd class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-mono-timer text-mono-timer">⌘K</kbd></div><div class="hidden xl:flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container text-tertiary font-mono-timer text-mono-timer whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>FastAPI & PyMuPDF en línea</div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-variant text-on-surface font-label-md text-label-md hover:bg-surface-bright hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">qr_code</span><span class="hidden sm:inline">Crear QR temporal</span></button><button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all" type="button"><span class="material-symbols-outlined text-[18px]">upload_file</span><span class="hidden sm:inline">+ Subir documento</span></button><div class="relative ml-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button></div><div class="flex items-center gap-space-sm pl-space-sm ml-space-xs"><div class="flex flex-col items-end hidden md:flex"><span class="font-label-md text-label-md text-on-surface leading-tight">Oficial de Encriptación</span><span class="font-mono-timer text-mono-timer text-outline">Security Officer</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzJivWg0oMot5kQVsd0DvE2Z1N_pU61xYZ-QJbX6PBBouIdK-5wVheQFso9goYYtyELxGURdC1ybcY786ptDyR0k-R3fBWDE3x_BKkiTc0qhSaPJnO2lKngtuiV2ygCWDstoXnuPU4u8PVw9Xex-ZzgRfkabaTSXlbTo8_emGeMSUxeygpsHAoQybaWr6cKmdZnduBC6FT_qFmNVX50-8LwRvfY8IRtowR4-r7igeRZNlngnsAMCw"/></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- 1. Barra Superior de Herramientas de Edición (Sub-header Contextual y Barra de Modo) -->
+<section class="w-full bg-surface-container-low px-gutter py-space-sm flex flex-col gap-space-sm shadow-md z-30">
+<!-- Fila 1: Metadatos de Archivo, Control de Versión y Acciones Principales -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Izquierda: Identificador de Documento & Estado en Vivo -->
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex items-center gap-space-sm bg-surface-container-highest px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<span class="font-headline-md text-body-md font-semibold text-on-surface truncate max-w-xs md:max-w-md">Contrato_Marco_Servicios_Tecnologicos_v3.pdf</span>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer hover:text-on-surface">edit</span>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-mono-timer text-mono-timer uppercase tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Modo Edición Activo
+          </span>
+<span class="text-outline font-mono-timer text-mono-timer flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">cloud_done</span>
+            Guardado automático (hace 12s)
+          </span>
+</div>
+</div>
+<!-- Centro-Derecha: Undo/Redo & Acciones de Exportación -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" title="Deshacer (Ctrl+Z)">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" title="Rehacer (Ctrl+Y)">
+<span class="material-symbols-outlined text-[18px]">redo</span>
+</button>
+<div class="h-4 w-px bg-surface-variant mx-1"></div>
+<button class="flex items-center gap-1 px-2 py-1 rounded hover:bg-surface-variant font-mono-timer text-mono-timer text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<span>v3.2</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span class="hidden lg:inline">QR Efímero</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar</span>
+</button>
+</div>
+</div>
+<!-- Fila 2: Barra de Herramientas de Edición (Tool Ribbon) -->
+<div class="flex items-center justify-between overflow-x-auto no-scrollbar pt-1">
+<!-- Selector de Modo de Interacción -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-xl">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">arrow_selector_tool</span>
+<span>Cursor</span>
+</button>
+<!-- Herramienta Seleccionada: Editar Texto -->
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold shadow-[0_0_12px_rgba(0,83,219,0.5)] transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Editar Texto</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">title</span>
+<span>Añadir Texto</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">image</span>
+<span>Imágenes</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">ink_highlighter</span>
+<span>Resaltar</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Firma Digital</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span>Páginas</span>
+</button>
+</div>
+<!-- Acciones de Procesamiento Documental Avanzado -->
+<div class="hidden xl:flex items-center gap-1 bg-surface-container p-1 rounded-xl">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-tertiary hover:bg-surface-container-high transition-all font-label-md text-body-sm" title="Reconocimiento óptico de caracteres">
+<span class="material-symbols-outlined text-[18px] text-tertiary">document_scanner</span>
+<span>OCR PyMuPDF</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">burst_mode</span>
+<span>Convertir Img</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">compress</span>
+<span>Comprimir</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all font-label-md text-body-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Cifrar AES</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CONTENIDO PRINCIPAL: Layout de 3 Columnas (Thumbnails | Lienzo A4 | Inspector) -->
+<div class="flex flex-1 w-full relative overflow-hidden" style="min-height: calc(100vh - 176px);">
+<!-- 2. PANEL IZQUIERDO: Miniaturas de Páginas y Esquema (260px) -->
+<aside class="hidden md:flex flex-col w-64 bg-surface-container-low shrink-0 z-20">
+<!-- Pestañas del Panel Lateral -->
+<div class="flex items-center justify-around bg-surface-container-lowest/70 p-1">
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-primary font-semibold bg-surface-container rounded">
+          Miniaturas
+        </button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+          Capas
+        </button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+          Marcadores
+        </button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+          Adjuntos
+        </button>
+</div>
+<!-- Barra de herramientas de miniaturas -->
+<div class="px-space-md py-space-sm flex items-center justify-between bg-surface-container/40">
+<span class="font-mono-timer text-mono-timer text-outline uppercase tracking-wider">4 Páginas • 300 DPI</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high" title="Rotar Página">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high" title="Duplicar">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-error-container/30" title="Eliminar Página">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Lista de Miniaturas Desplazable -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md">
+<!-- Página 1 (Activa) -->
+<div class="group relative flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container shadow-md ring-2 ring-primary">
+<div class="w-full flex items-center justify-between text-on-surface-variant">
+<span class="font-mono-timer text-mono-timer text-primary font-bold">PÁG 01</span>
+<span class="px-1 py-0.5 rounded bg-tertiary-container/40 text-tertiary font-mono-timer text-[10px]">OCR OK</span>
+</div>
+<!-- Vista miniatura simulada A4 -->
+<div class="w-36 h-48 bg-surface-container-lowest rounded shadow-inner p-2 flex flex-col justify-between overflow-hidden relative">
+<div class="w-8 h-2 bg-primary/40 rounded-sm mb-1"></div>
+<div class="space-y-1">
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-11/12 h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-4/5 h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-full h-1 bg-on-surface/15 rounded-full"></div>
+</div>
+<div class="w-16 h-3 bg-secondary/30 rounded-sm mt-auto"></div>
+<!-- Overlay interactivo hover -->
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-1 transition-opacity">
+<span class="p-1 rounded-full bg-surface-container-highest text-on-surface shadow text-[12px] material-symbols-outlined">zoom_in</span>
+</div>
+</div>
+<span class="font-mono-data text-[11px] text-outline">A4 • 142 KB</span>
+</div>
+<!-- Página 2 -->
+<div class="group relative flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="w-full flex items-center justify-between text-on-surface-variant">
+<span class="font-mono-timer text-mono-timer text-outline">PÁG 02</span>
+<span class="px-1 py-0.5 rounded bg-surface-variant text-outline font-mono-timer text-[10px]">Texto</span>
+</div>
+<div class="w-36 h-48 bg-surface-container-lowest/80 rounded shadow-inner p-2 flex flex-col justify-between overflow-hidden">
+<div class="space-y-1">
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-3/4 h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-5/6 h-1 bg-on-surface/20 rounded-full"></div>
+</div>
+<div class="w-20 h-10 bg-surface-variant rounded mt-2"></div>
+<div class="w-full h-1 bg-on-surface/10 rounded-full mt-auto"></div>
+</div>
+<span class="font-mono-data text-[11px] text-outline">A4 • 188 KB</span>
+</div>
+<!-- Página 3 -->
+<div class="group relative flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="w-full flex items-center justify-between text-on-surface-variant">
+<span class="font-mono-timer text-mono-timer text-outline">PÁG 03</span>
+<span class="px-1 py-0.5 rounded bg-surface-variant text-outline font-mono-timer text-[10px]">Texto</span>
+</div>
+<div class="w-36 h-48 bg-surface-container-lowest/80 rounded shadow-inner p-2 flex flex-col justify-between overflow-hidden">
+<div class="space-y-1">
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-4/5 h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+</div>
+<div class="w-16 h-8 bg-tertiary-container/30 rounded mt-2"></div>
+<div class="w-full h-1 bg-on-surface/10 rounded-full mt-auto"></div>
+</div>
+<span class="font-mono-data text-[11px] text-outline">A4 • 95 KB</span>
+</div>
+<!-- Página 4 -->
+<div class="group relative flex flex-col items-center gap-1.5 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="w-full flex items-center justify-between text-on-surface-variant">
+<span class="font-mono-timer text-mono-timer text-outline">PÁG 04</span>
+<span class="px-1 py-0.5 rounded bg-surface-variant text-outline font-mono-timer text-[10px]">Firmas</span>
+</div>
+<div class="w-36 h-48 bg-surface-container-lowest/80 rounded shadow-inner p-2 flex flex-col justify-between overflow-hidden">
+<div class="space-y-1">
+<div class="w-full h-1 bg-on-surface/20 rounded-full"></div>
+<div class="w-2/3 h-1 bg-on-surface/20 rounded-full"></div>
+</div>
+<div class="flex gap-1 mt-4">
+<div class="w-14 h-8 bg-surface-container-high rounded border-dashed"></div>
+<div class="w-14 h-8 bg-surface-container-high rounded border-dashed"></div>
+</div>
+<div class="w-12 h-1 bg-on-surface/20 rounded-full mt-auto"></div>
+</div>
+<span class="font-mono-data text-[11px] text-outline">A4 • 112 KB</span>
+</div>
+</div>
+</aside>
+<!-- 3. ÁREA CENTRAL DE TRABAJO: Canvas del Documento & Viewport -->
+<main class="flex-1 flex flex-col items-center justify-start overflow-y-auto bg-surface-container-lowest p-space-lg lg:p-space-xl relative">
+<!-- Barra Flotante Superior de Canvas: Guías, Regla & Estado de Enfoque -->
+<div class="w-full max-w-4xl flex items-center justify-between mb-space-md text-on-surface-variant font-mono-timer text-mono-timer">
+<div class="flex items-center gap-space-sm bg-surface-container/70 backdrop-blur px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">grid_4x4</span>
+<span>Alineación Magnética: Activa (1mm)</span>
+<span class="text-outline">|</span>
+<span>Regla: Puntos Tipográficos (pt)</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm bg-surface-container/70 backdrop-blur px-3 py-1.5 rounded-lg shadow-sm text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Buffer PyMuPDF: En sincronía</span>
+</div>
+</div>
+<!-- HOJA DE DOCUMENTO RENDEREADA (Hoja A4 Profesional con Tipografía Real) -->
+<div class="relative w-full max-w-[780px] bg-surface rounded shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7)] p-10 md:p-14 text-on-surface min-h-[1050px] transition-all">
+<!-- Encabezado Corporativo del Documento -->
+<div class="flex items-center justify-between pb-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md font-bold">
+              DP
+            </div>
+<div>
+<p class="font-headline-md text-body-md font-bold uppercase tracking-tight text-on-surface">DOCUPILOT ENTERPRISE SOLUTIONS S.L.</p>
+<p class="font-mono-timer text-mono-timer text-outline">DEPARTAMENTO JURÍDICO & COMPLIANCE</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-mono-data text-mono-data font-semibold text-primary">REF: DP-2025-CTR-9821</p>
+<p class="font-mono-timer text-mono-timer text-outline">Fecha de Emisión: 14 Octubre 2025</p>
+</div>
+</div>
+<!-- Título del Contrato -->
+<div class="text-center my-6 space-y-1">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+            CONTRATO MARCO DE PRESTACIÓN DE SERVICIOS TECNOLÓGICOS
+          </h1>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Y ACUERDO DE NIVEL DE SERVICIO (SLA) CON GARANTÍA CRIPTOGRÁFICA
+          </p>
+</div>
+<!-- Cláusula 1 -->
+<div class="space-y-2 mb-6">
+<h2 class="font-headline-md text-body-md font-bold text-primary flex items-center gap-2">
+<span>CLÁUSULA PRIMERA:</span>
+<span class="text-on-surface font-semibold">PARTES INTERVINIENTES Y OBJETO</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">
+            De una parte, <strong class="text-on-surface font-semibold">DOCUPILOT CORP.</strong>, provista de CIF B-98442110, y de otra parte el <strong class="text-on-surface font-semibold">CLIENTE INSTITUCIONAL</strong>, convienen en formalizar el presente acuerdo operativo para el despliegue del motor de procesamiento documental seguro bajo estándares ISO/IEC 27001.
+          </p>
+</div>
+<!-- BLOQUE ACTIVO SELECCIONADO (Bounding Box Interactivo con Menú Contextual) -->
+<div class="relative my-8 p-3 rounded bg-secondary-container/10">
+<!-- Menú Flotante Contextual encima de la Bounding Box -->
+<div class="absolute -top-14 left-0 right-0 mx-auto max-w-lg bg-surface-container-high/95 backdrop-blur-md rounded-xl p-1.5 flex items-center justify-between shadow-2xl z-40">
+<!-- Selector de fuente rápida detectada -->
+<div class="flex items-center gap-1.5 pl-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">font_download</span>
+<span class="font-mono-data text-[12px] text-on-surface font-semibold">Inter Display</span>
+<span class="font-mono-timer text-[10px] text-tertiary bg-tertiary-container/30 px-1 py-0.5 rounded">98% match</span>
+</div>
+<!-- Acciones tipográficas directas -->
+<div class="flex items-center gap-0.5 bg-surface-container rounded p-0.5">
+<button class="px-2 py-1 font-mono-data text-[12px] text-on-surface hover:bg-surface-variant rounded">14pt</button>
+<div class="h-3 w-px bg-surface-variant mx-1"></div>
+<button class="p-1 rounded text-primary hover:bg-surface-variant font-bold text-[13px]">B</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-variant italic text-[13px]">I</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-variant text-[13px] underline">U</button>
+<div class="h-3 w-px bg-surface-variant mx-1"></div>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[15px]">format_align_left</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[15px]">format_align_justify</span>
+</button>
+</div>
+<!-- Selector de color rápido -->
+<div class="flex items-center gap-1 pr-1">
+<span class="w-4 h-4 rounded-full bg-on-surface cursor-pointer ring-1 ring-outline"></span>
+<span class="w-4 h-4 rounded-full bg-primary cursor-pointer"></span>
+</div>
+</div>
+<!-- Bounding Box Azul con Nodos de Redimensionamiento -->
+<div class="relative outline outline-2 outline-secondary rounded p-2">
+<!-- Nodos en las esquinas -->
+<div class="absolute -top-1.5 -left-1.5 w-3 h-3 bg-secondary rounded-xs cursor-nwse-resize shadow"></div>
+<div class="absolute -top-1.5 -right-1.5 w-3 h-3 bg-secondary rounded-xs cursor-nesw-resize shadow"></div>
+<div class="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-secondary rounded-xs cursor-nesw-resize shadow"></div>
+<div class="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-secondary rounded-xs cursor-nwse-resize shadow"></div>
+<!-- Nodos medios -->
+<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-secondary rounded-xs cursor-ns-resize shadow"></div>
+<div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-secondary rounded-xs cursor-ns-resize shadow"></div>
+<!-- Texto Activo que el usuario está editando -->
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight mb-2">
+              CLÁUSULA SEGUNDA: CONFIDENCIALIDAD Y TRATAMIENTO DE METADATOS
+            </h2>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed text-justify">
+              Todos los activos documentales procesados a través del motor <span class="bg-primary/20 px-1 rounded text-primary font-medium">PyMuPDF Core v1.24</span> mantendrán un régimen de retención transitoria efímera (TTL) no superior a sesenta (60) minutos desde su despacho, garantizando la eliminación forense irreversible de cualquier copia en memoria volátil o almacenamiento secundario.
+            </p>
+</div>
+<!-- Píldora de validación contextual bajo la selección -->
+<div class="mt-2 flex items-center justify-between font-mono-timer text-[11px] text-tertiary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+              Fuente incrustada mapeada con éxito. Formato y kerning preservados.
+            </span>
+<span class="text-outline">Posición: X: 42.5pt • Y: 318.0pt • Ancho: 510pt</span>
+</div>
+</div>
+<!-- Cláusula 3 con Anotación en Margen -->
+<div class="space-y-2 mb-8 relative">
+<h2 class="font-headline-md text-body-md font-bold text-primary flex items-center gap-2">
+<span>CLÁUSULA TERCERA:</span>
+<span class="text-on-surface font-semibold">FIRMA ELECTRÓNICA Y NO REPUDIO</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">
+            Las partes acuerdan que las firmas digitales estampadas mediante algoritmos asimétricos con hash SHA-256 gozan de plena validez jurídica vinculante conforme al Reglamento (UE) Nº 910/2014 (eIDAS).
+          </p>
+<!-- Tarjeta Flotante de Anotación en Margen Derecho -->
+<div class="absolute -right-8 top-0 translate-x-full w-60 bg-surface-container-high rounded-xl p-3 shadow-xl hidden 2xl:flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Security Architect</span>
+</div>
+<span class="font-mono-timer text-[10px] text-outline">10:42 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Se ha verificado el certificado raíz con la autoridad de sellado. Listo para visar.
+            </p>
+<div class="flex items-center justify-end gap-1 mt-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-timer text-[10px]">Resolver</button>
+</div>
+</div>
+</div>
+<!-- Cuadro de Firma Digital Verificado -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Firma Digital Verificada</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-mono-timer text-[10px] font-bold uppercase">eIDAS Válida</span>
+</div>
+<p class="font-mono-timer text-mono-timer text-outline mt-0.5 truncate max-w-sm">
+                SHA-256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">
+              Inspeccionar Certificado
+            </button>
+</div>
+</div>
+<!-- Pie de Página Documental Real -->
+<div class="mt-16 pt-4 flex items-center justify-between text-outline font-mono-timer text-mono-timer">
+<span>Página 1 de 4 • DocuPilot ID: 0092-AX-99</span>
+<span>DOCUMENTO AUDITADO BAJO NORMA ISO/IEC 27001</span>
+</div>
+</div>
+</main>
+<!-- 4. PANEL DERECHO: Inspector de Propiedades y Configuración (320px) -->
+<aside class="hidden lg:flex flex-col w-80 bg-surface-container-low shrink-0 z-20 overflow-y-auto">
+<!-- Pestañas de Inspector -->
+<div class="flex items-center bg-surface-container-lowest/80 p-1">
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-primary font-semibold bg-surface-container rounded">
+          Texto
+        </button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+          Página
+        </button>
+<button class="flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+          Seguridad
+        </button>
+</div>
+<!-- Sección 1: Propiedades de Tipografía & Bloque Activo -->
+<div class="p-space-md space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-space-xs">Tipografía Detectada</span>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">match_word</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Inter Display</span>
+<span class="font-mono-timer text-[10px] text-tertiary">Subconjunto TrueType (Incrustada)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] cursor-pointer">tune</span>
+</div>
+</div>
+<!-- Controles de Peso y Tamaño -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Peso Tipográfico</label>
+<select class="w-full bg-surface-container text-on-surface rounded-lg px-2.5 py-1.5 font-mono-data text-body-sm focus:outline-none">
+<option>Bold (700)</option>
+<option>SemiBold (600)</option>
+<option>Regular (400)</option>
+<option>Light (300)</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Tamaño de Fuente</label>
+<div class="flex items-center bg-surface-container rounded-lg px-2 py-1">
+<input class="w-full bg-transparent font-mono-data text-body-sm text-on-surface focus:outline-none" type="number" value="14"/>
+<span class="font-mono-timer text-mono-timer text-outline">pt</span>
+</div>
+</div>
+</div>
+<!-- Espaciado e Interlineado -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Interlineado (Line-Height)</label>
+<div class="flex items-center bg-surface-container rounded-lg px-2 py-1">
+<input class="w-full bg-transparent font-mono-data text-body-sm text-on-surface focus:outline-none" step="0.1" type="number" value="1.4"/>
+<span class="font-mono-timer text-mono-timer text-outline">em</span>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Kerning / Tracking</label>
+<div class="flex items-center bg-surface-container rounded-lg px-2 py-1">
+<input class="w-full bg-transparent font-mono-data text-body-sm text-on-surface focus:outline-none" type="number" value="-0.2"/>
+<span class="font-mono-timer text-mono-timer text-outline">px</span>
+</div>
+</div>
+</div>
+<!-- Relleno y Opacidad -->
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Color de Relleno & Opacidad</label>
+<div class="flex items-center gap-2 bg-surface-container p-2 rounded-lg">
+<input class="w-7 h-7 rounded cursor-pointer bg-transparent border-0 p-0" type="color" value="#dfe2f1"/>
+<span class="font-mono-data text-mono-data text-on-surface flex-1">#DFE2F1 (100%)</span>
+<div class="flex items-center gap-1 font-mono-timer text-mono-timer text-outline">
+<span class="material-symbols-outlined text-[16px]">opacity</span>
+<span>100%</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-variant my-space-md"></div>
+<!-- Sección 2: Parámetros de la Página Activa -->
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-space-xs">Configuración de Hoja</span>
+<div class="bg-surface-container p-space-sm rounded-lg space-y-2 text-on-surface-variant font-mono-data text-body-sm">
+<div class="flex justify-between items-center">
+<span class="text-outline">Dimensiones:</span>
+<span class="text-on-surface font-semibold">A4 (210 × 297 mm)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">Orientación:</span>
+<span class="text-on-surface">Vertical (Portrait)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">Caja de Margen:</span>
+<span class="text-on-surface">Top/Bottom 25mm</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-variant my-space-md"></div>
+<!-- Sección 3: Seguridad y Despacho QR Efímero -->
+<div class="bg-surface-container-high/60 p-space-md rounded-xl space-y-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">share_location</span>
+              Compartir con QR Efímero
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-mono-timer text-[10px]">Daemon TTL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Genera un código QR de alta resolución con acceso temporal cifrado para firmantes móviles.
+          </p>
+<div>
+<label class="font-label-sm text-label-sm text-outline block mb-1">Caducidad automática del enlace</label>
+<select class="w-full bg-surface-container text-on-surface rounded-lg px-2.5 py-1.5 font-mono-data text-body-sm focus:outline-none">
+<option>Expira en 2 Horas</option>
+<option>Expira en 30 Minutos</option>
+<option>Expira en 24 Horas</option>
+<option>Quemar tras primera lectura (Burn-on-Read)</option>
+</select>
+</div>
+<button class="w-full py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+            Generar QR de Esta Versión
+          </button>
+</div>
+<!-- Criptografía Activa Badge -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant font-mono-timer text-[11px]">
+<span class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            AES-256 GCM Activo
+          </span>
+<span class="text-outline">PDF/A-2b Compliant</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- 5. BARRA INFERIOR DE ESTADO Y CONTROL DE ZOOM (Fixed Bottom Bar) -->
+<footer class="w-full h-11 bg-surface-container-lowest px-gutter flex items-center justify-between text-on-surface-variant z-40 shadow-inner">
+<!-- Navegación de Páginas -->
+<div class="flex items-center gap-space-sm">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Página Anterior">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1 font-mono-timer text-mono-timer">
+<span class="text-on-surface font-bold">1</span>
+<span class="text-outline">/</span>
+<span>4</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Página Siguiente">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<div class="hidden md:flex items-center gap-1 ml-2 text-outline font-mono-timer text-mono-timer">
+<span>Salto rápido:</span>
+<kbd class="px-1 rounded bg-surface-container text-on-surface">P</kbd>
+</div>
+</div>
+<!-- Telemetría en Vivo del Motor PyMuPDF -->
+<div class="hidden md:flex items-center gap-space-md font-mono-timer text-mono-timer">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>60 FPS</span>
+</span>
+<span class="text-outline">|</span>
+<span>Motor: PyMuPDF v1.24 (FastAPI Backend)</span>
+<span class="text-outline">|</span>
+<span class="text-tertiary">Hash SHA-256: e3b0c442... [Verificado]</span>
+</div>
+<!-- Controles de Zoom del Canvas -->
+<div class="flex items-center gap-space-sm">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Reducir Zoom">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<input class="w-20 md:w-28 accent-primary h-1 bg-surface-variant rounded-lg cursor-pointer" max="250" min="50" type="range" value="125"/>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Aumentar Zoom">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<span class="font-mono-timer text-mono-timer text-on-surface font-semibold min-w-[42px] text-right">125%</span>
+<div class="h-4 w-px bg-surface-variant mx-1 hidden sm:block"></div>
+<button class="hidden sm:inline-flex items-center gap-1 p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-timer text-mono-timer" title="Ajustar al Ancho">
+<span class="material-symbols-outlined text-[16px]">fit_screen</span>
+</button>
+<button class="hidden sm:inline-flex items-center gap-1 p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-mono-timer text-mono-timer" title="Página Completa">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interacción ligera para selector de zoom e inspectores
+  document.addEventListener('DOMContentLoaded', () => {
+    const zoomSlider = document.querySelector('input[type="range"]');
+    const zoomLabel = zoomSlider ? zoomSlider.nextElementSibling.nextElementSibling : null;
+    
+    if(zoomSlider && zoomLabel) {
+      zoomSlider.addEventListener('input', (e) => {
+        zoomLabel.textContent = `${e.target.value}%`;
+      });
+    }
+  });
+</script></main></div></body></html>
