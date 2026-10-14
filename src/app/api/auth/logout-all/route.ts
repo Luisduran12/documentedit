@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { requireSession, unauthorizedResponse } from "@/lib/auth/dal";
+import { invalidateSettingsCache, requireSession, unauthorizedResponse } from "@/lib/auth/dal";
 import { SESSION_COOKIE } from "@/lib/auth/session";
 import { bumpSessionVersion } from "@/lib/auth/settings";
 
@@ -11,6 +11,7 @@ export async function POST() {
     return unauthorizedResponse();
   }
   await bumpSessionVersion();
+  invalidateSettingsCache();
   const res = NextResponse.json({ ok: true });
   res.cookies.delete(SESSION_COOKIE);
   return res;

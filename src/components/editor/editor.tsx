@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
@@ -50,7 +51,6 @@ import { frameSize, normalizeRotation } from "@/lib/editor/geometry";
 import { addObject, deleteSelection, duplicateSelection, moveSelection, removeObject, uid, updateObject, useEditorStore, type Tool } from "@/lib/editor/store";
 import { effectiveDpi, isSupportedImage, LOW_DPI, prepareImage } from "./image-input";
 import { buildZip, pdfFileName, pngExportNames, renderPagesToPng } from "@/lib/export-files";
-import { ShareQrPicker } from "./share-qr-picker";
 import { clientToFrame } from "./page-view";
 import { pinchResize, pinchState } from "./gestures";
 import type { ContentReport } from "@/lib/editor/pdf/text-edits";
@@ -62,21 +62,25 @@ import { uploadToR2 } from "@/lib/upload-client";
 import { clampZoom, EditorContext, type CanvasEntry, type EditorCtx } from "./editor-context";
 import { Inspector } from "./inspector";
 import { PageView } from "./page-view";
-import { SignaturePad, type Signature } from "./signature-pad";
+import type { Signature } from "./signature-pad";
 import { Thumbnails } from "./thumbnails";
 import { useAutosave } from "./use-autosave";
-import { VersionsModal } from "./versions-modal";
 import { formatDateTime } from "@/lib/dates";
 import type { DocumentItem } from "@/components/documents/types";
-import { OCRDialog } from "./ocr/ocr-dialog";
 import { OCRReviewPanel } from "./ocr/ocr-review-panel";
-import { DiffViewerDialog } from "./ocr/diff-viewer-dialog";
-import { ConvertDialog } from "./convert/convert-dialog";
-import { OrganizeDialog } from "./organize/organize-dialog";
-import { AIAssistantDrawer } from "./ai/ai-assistant-drawer";
 import { ContextToolbar } from "./context-toolbar";
 import { OCRClient } from "@/lib/ocr/ocr-client";
 import type { OCRDocumentResult, OCRMode, AIAnalysisResult, OCRWord } from "@/lib/ocr/types";
+
+// Diálogos pesados: se cargan aparte para no inflar el bundle inicial del editor.
+const ShareQrPicker = dynamic(() => import("./share-qr-picker").then((m) => m.ShareQrPicker), { ssr: false });
+const SignaturePad = dynamic(() => import("./signature-pad").then((m) => m.SignaturePad), { ssr: false });
+const VersionsModal = dynamic(() => import("./versions-modal").then((m) => m.VersionsModal), { ssr: false });
+const OCRDialog = dynamic(() => import("./ocr/ocr-dialog").then((m) => m.OCRDialog), { ssr: false });
+const DiffViewerDialog = dynamic(() => import("./ocr/diff-viewer-dialog").then((m) => m.DiffViewerDialog), { ssr: false });
+const ConvertDialog = dynamic(() => import("./convert/convert-dialog").then((m) => m.ConvertDialog), { ssr: false });
+const OrganizeDialog = dynamic(() => import("./organize/organize-dialog").then((m) => m.OrganizeDialog), { ssr: false });
+const AIAssistantDrawer = dynamic(() => import("./ai/ai-assistant-drawer").then((m) => m.AIAssistantDrawer), { ssr: false });
 
 function makeLoaders(customFonts: ReturnType<typeof toCatalog>) {
   return {

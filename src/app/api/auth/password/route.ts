@@ -1,7 +1,7 @@
 import { eq, sql } from "drizzle-orm";
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
-import { requireSession, unauthorizedResponse } from "@/lib/auth/dal";
+import { invalidateSettingsCache, requireSession, unauthorizedResponse } from "@/lib/auth/dal";
 import { decodeHash, hashPassword, verifyPassword } from "@/lib/auth/password";
 import { SESSION_COOKIE, sessionCookieOptions, signSession } from "@/lib/auth/session";
 import { db, schema } from "@/lib/db";
@@ -15,7 +15,7 @@ const Body = z.object({
 export async function POST(request: NextRequest) {
   let settings;
   try {
-    ({ settings } = await requireSession());
+    ({ settings } = await requireSession({ fresh: true }));
   } catch {
     return unauthorizedResponse();
   }
@@ -32,6 +32,7 @@ export async function POST(request: NextRequest) {
     const nextHash = await hashPassword(parsed.data.next);
     localDb.prepare("UPDATE app_settings SET password_hash = ?, session_version = session_version + 1, updated_at = datetime('now') WHERE id = 1").run(nextHash);
     const row = localDb.prepare("SELECT session_version FROM app_settings WHERE id = 1").get() as any;
+    invalidateSettingsCache();
     const res = NextResponse.json({ ok: true });
     res.cookies.set(SESSION_COOKIE, await signSession(row.session_version), sessionCookieOptions);
     return res;
@@ -46,6 +47,7 @@ export async function POST(request: NextRequest) {
     .where(eq(schema.appSettings.id, 1))
     .returning({ sv: schema.appSettings.sessionVersion });
 
+  invalidateSettingsCache();
   const res = NextResponse.json({ ok: true });
   res.cookies.set(SESSION_COOKIE, await signSession(row.sv), sessionCookieOptions);
   return res;
